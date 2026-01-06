@@ -491,27 +491,41 @@ with additional publication charges as per the willingness of the authors.
 
 <!-- SUBMISSION FORM -->
 <section id="submit">
-<div class="container">
-<h2>Paper Submission</h2>
-<form id="paperForm">
-<input name="author" placeholder="Corresponding Author Name" required>
-<select name="country" id="country" required></select>
-<select name="track" required>
-<option>Track 1 – Intelligent Electronics</option>
-<option>Track 2 – AI Power Engineering</option>
-<option>Track 3 – Robotics & Control</option>
-<option>Track 4 – Mechanical Systems</option>
-<option>Track 5 – Sustainable Engineering</option>
-</select>
-<input name="title" placeholder="Paper Title" required>
-<input name="institution" placeholder="Institution Name" required>
-<input type="email" name="email" placeholder="Email ID" required>
-<input name="whatsapp" placeholder="WhatsApp Number" required>
-<input type="file" name="paper" accept=".doc,.docx" required>
-<button>Submit Paper</button>
-</form>
-</div>
+  <div class="container">
+    <h2>Paper Submission</h2>
+
+    <form id="paperForm">
+      
+      <input name="author" placeholder="Corresponding Author Name" required>
+
+      <!-- Country Select with Default -->
+      <select name="country" id="country" required>
+        <option value="" disabled selected>Select Country</option>
+        <!-- Countries will be populated by JS -->
+      </select>
+
+      <!-- Track Select with Default -->
+      <select name="track" required>
+        <option value="" disabled selected>Select Track</option>
+        <option value="Track 1 – Intelligent Electronics">Track 1 – Intelligent Electronics</option>
+        <option value="Track 2 – AI Power Engineering">Track 2 – AI Power Engineering</option>
+        <option value="Track 3 – Robotics & Control">Track 3 – Robotics & Control</option>
+        <option value="Track 4 – Mechanical Systems">Track 4 – Mechanical Systems</option>
+        <option value="Track 5 – Sustainable Engineering">Track 5 – Sustainable Engineering</option>
+      </select>
+
+      <input name="title" placeholder="Paper Title" required>
+      <input name="institution" placeholder="Institution Name" required>
+      <input type="email" name="email" placeholder="Email ID" required>
+      <input name="whatsapp" placeholder="WhatsApp Number" required>
+
+      <input type="file" name="paper" accept=".doc,.docx" required>
+
+      <button type="submit">Submit Paper</button>
+    </form>
+  </div>
 </section>
+
 
 <!-- CONTACT -->
 <section id="contact">
@@ -587,6 +601,7 @@ function toggleMenu(){
 
 </body>
 </html>
+
 
 
 
