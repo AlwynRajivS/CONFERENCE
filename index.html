@@ -381,6 +381,104 @@ p {
   letter-spacing:1px;
 }
 
+  /* SECTION */
+#submit{
+  padding:80px 16px;
+  background:radial-gradient(circle at top,#1e3a8a,#020617);
+}
+
+/* GLASS CONTAINER */
+.glass{
+  max-width:800px;
+  margin:auto;
+  padding:32px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,0.18);
+  box-shadow:0 25px 60px rgba(0,0,0,.45);
+}
+
+/* TITLE */
+.glass h2{
+  text-align:center;
+  margin-bottom:22px;
+  font-size:26px;
+  background:linear-gradient(90deg,#38bdf8,#22c55e);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* FORM ELEMENTS */
+#paperForm input,
+#paperForm select{
+  width:100%;
+  padding:14px;
+  margin-bottom:14px;
+  border-radius:12px;
+  background:rgba(2,6,23,.85);
+  border:1px solid #334155;
+  color#020617;
+  outline:none;
+  font-size:15px;
+}
+
+#paperForm input::placeholder{
+  color:#94a3b8;
+}
+
+#paperForm select option{
+  background:#020617;
+  color:#fff;
+}
+
+/* FILE INPUT */
+.dark-file{
+  padding:10px;
+}
+
+.dark-file::file-selector-button{
+  background:linear-gradient(90deg,#1e40af,#020617);
+  color:#fff;
+  border:none;
+  padding:10px 18px;
+  margin-right:10px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+  transition:.3s;
+}
+
+.dark-file::file-selector-button:hover{
+  background:linear-gradient(90deg,#2563eb,#1e293b);
+}
+
+/* SUBMIT BUTTON */
+#paperForm button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:14px;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  background:linear-gradient(90deg,#22c55e,#16a34a);
+  color:#fff;
+  transition:.3s ease;
+}
+
+#paperForm button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 25px rgba(34,197,94,.45);
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .glass{padding:24px}
+}
+
+
 @keyframes pulse{
   0%{transform:scale(1)}
   50%{transform:scale(1.05)}
@@ -705,15 +803,15 @@ Publication: Scopus / Springer Lecture Notes
   <a href="#committee" onclick="toggleMenu()">Committee</a>
   <a href="#dates" onclick="toggleMenu()">Important Dates</a>
   <a href="#fee" onclick="toggleMenu()">Conference Fee</a>
-  <a href="#guidelines" onclick="toggleMenu()">Guidelines</a>
-  <a href="#publication" onclick="toggleMenu()">Publication</a>
+  <a href="#guidelines" onclick="toggleMenu()">Guidelines & Puclication</a>
+  <!-- <a href="#publication" onclick="toggleMenu()">Publication</a> -->
   <a href="#submit" onclick="toggleMenu()">Paper Submission</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
-  <a href="images/brochure.pdf" download>Download Brochure</a>
+  <!-- <a href="images/brochure.pdf" download>Download Brochure</a> -->
 </div>
 
 <a class="whatsapp-live"
-   href="https://wa.me/919788569886?text=Hello%20INNOVATE%202026%20Team,%20I%20need%20information%20about%20paper%20submission."
+   href="https://wa.me/919487759597?text=Hello%20INNOVATE%202026%20Team,%20I%20need%20information%20about%20paper%20submission."
    target="_blank"
    title="Chat with us on WhatsApp">
   💬
@@ -851,10 +949,14 @@ The event encourages interdisciplinary research across Electrical, Electronics, 
 <div class="container">
 <h2>Keynote Speakers</h2>
 <div class="grid">
-<div class="card"><img src="images/keynote1.jpg"><center>Dr. T. P. D. Rajan<br>CSIR-NIIST, India</center></div>
-<div class="card"><img src="images/keynote2.jpeg"><center>Dr. Reshmy Krishnan<br>Muscat College</center></div>
-<div class="card"><img src="images/keynote3.jpg"><center>Ts. Dr. Muhammad Ammirrul Atiqi<br>UKM, Malaysia</center></div>
-<div class="card"><img src="images/keynote4.jpg"><center>Prof. Dr. Margarita Perez<br>Spain</center></div>
+<div class="card"><img src="images/keynote1.jpg"><center><strong>Dr. T. P. D. Rajan</strong><br> Chief Scientist, 
+<br>Materials Science and Technology Division,
+<br>CSIR-National Institute for Interdisciplinary Science and Technology (CSIR-NIIST), 
+<br>Ministry of Science and Technology, <br>Govt. of India,
+<br>Trivandrum 
+</center></div>
+<div class="card"><img src="images/keynote2.jpeg"><center><strong>Dr. Reshmy Krishnan</strong><br>Associate Professor,<br>Computing Department and Head of Research,<br>Muscat College</center></div>
+<div class="card"><img src="images/keynote3.jpg"><center><strong>Ts. Dr. Muhammad Ammirrul Atiqi</strong><br>Department of Electrical, Electronics and Systems Engineering,<br>Faculty of Engineering and Built Environment, <br>Universiti Kebangsaan Malaysia</center></div>
 </div>
 </div>
 </section>
@@ -976,21 +1078,43 @@ The event encourages interdisciplinary research across Electrical, Electronics, 
 <!-- COMMITTEE -->
 <section id="committee">
 <div class="container">
-<h2>Organizing Committee</h2>
-<div class="grid">
-<div class="card"><center>Dr. R. Suresh Babu</center></div>
-<div class="card"><center>Dr. D. Prince Winston</center></div>
-<div class="card"><center>Dr. S. Thanga Kasi Rajan</center></div>
-</div>
-
 <h2 style="margin-top:40px">Technical Committee</h2>
 <div class="grid">
-<div class="card"><center>Dr. Anand Anbalagan</center></div>
-<div class="card"><center>Tomonobu Senjyu</center></div>
-<div class="card"><center>Dr. Akhtar Kalam</center></div>
-<div class="card"><center>Dr. Nnamdi Nwulu</center></div>
+<div class="card"><center><strong>Dr. Anand Anbalagan</strong><br>Technical and Vocational Training Institute, Ethiopia</center></div>
+<div class="card"><center><strong>Mr. Muddineni Raveendra</strong><br>Foxconn, Taiwan.</center></div>
+<div class="card"><center><strong>Tomonobu Senjyu</strong><br> University of the Ryukyus, Japan</center></div>
+<div class="card"><center><strong>Muhammad Ammirrul Atiqi </strong><br> Universiti Kebangsaan, Malaysia</center></div>
+<div class="card"><center><strong>Nnamdi Nwulu</strong><br> University of Johannesburg, South Africa</center></div>
+<div class="card"><center><strong>B. Praveen Kumar</strong><br> Universiti Kebangsaan, Malaysia</center></div>
+<div class="card"><center><strong>Shitharth S </strong><br> Kebri Dehar University, Ethiopi</center></div>
+<div class="card"><center><strong>S. Devakirubakaran</strong><br> SRM Institute of Science and Technology</center></div>
+<div class="card"><center><strong>Akhtar Kalam</strong><br> Victoria University, Melbourne, Australia</center></div>
+<div class="card"><center><strong>G M Shafiullah </strong><br> Murdoch University, Australia</center></div>
+<div class="card"><center><strong>Hassan Haes Alhelou </strong><br>  Smart Energy Systems Lab., Ireland</center></div>
+<div class="card"><center><strong> Dr. S. Kanthamani  </strong><br>  Thiagarajar College of Engineering, Madurai.</center></div>
+<div class="card"><center><strong>Satheesh Prabhu Gurusamy </strong><br>  Texas, United States</center></div>
+<div class="card"><center><strong> Rajvikram Madurai Elavarasan </strong><br>  Texas A& M University, US</center></div>
 </div>
 </div>
+<h2>Organizing Committee</h2>
+<div class="grid">
+<div class="card"><center><strong>Thiru.R.Mahesh Kumar, B.A.,</strong><br>Secretary</center></div>
+<div class="card"><center><strong>Dr. S. Senthil</strong><br>Principal</center></div>
+</div>
+<h2>Conveners</h2>
+<div class="grid">
+<div class="card"><center><strong>Dr. R. Suresh Babu</strong><br>Professor & Head, ECE</center></div>
+<div class="card"><center><strong>Dr. D. Prince Winston</strong><br>Professor & Head, EEE</center></div>
+<div class="card"><center><strong>Dr. S. Thanga Kasi Rajan</strong><br>Associate Professor & Head, MECH</center></div>
+</div>
+<h2>Coordinators</h2>
+<div class="grid">
+<div class="card"><center><strong>Dr. P. Narayanasamy</strong><br>Associate Professor, MECH</center></div>
+<div class="card"><center><strong>Dr. N. M.Mary Sindhuja</strong><br>Associate Professor, ECE</center></div>
+<div class="card"><center><strong>Dr. B. Guru Karthik Babu</strong><br>Associate Professor, EEE</center></div>
+</div>
+
+
 </section>
 
 <!-- IMPORTANT DATES -->
@@ -1077,6 +1201,22 @@ Additional <b>₹ 500</b> will be charged for extra authors participating in
 </div>
 </section>
 
+  <div style="margin-top:20px">
+  <center>
+  <a href="images/conference-template-a4.docx" download
+     style="
+       display:inline-block;
+       padding:14px 28px;
+       background:linear-gradient(90deg,#22c55e,#38bdf8);
+       color:#000;
+       font-weight:600;
+       border-radius:30px;
+       text-decoration:none;
+     ">
+    Download Paper Template
+  </a></center>
+</div>
+
 <!-- PUBLICATION -->
 <section id="publication">
 <div class="container">
@@ -1093,47 +1233,39 @@ with additional publication charges as per the willingness of the authors.
 </div>
 </section>
 
-<div style="margin-top:20px">
-  <center>
-  <a href="images/conference-template-a4.docx" download
-     style="
-       display:inline-block;
-       padding:14px 28px;
-       background:linear-gradient(90deg,#22c55e,#38bdf8);
-       color:#000;
-       font-weight:600;
-       border-radius:30px;
-       text-decoration:none;
-     ">
-    Download Paper Template
-  </a></center>
-</div>
+
 
 <!-- SUBMISSION FORM -->
 <section id="submit">
-<div class="container">
-<h2>Paper Submission</h2>
-<form id="paperForm">
-<input name="author" placeholder="Corresponding Author Name" required>
-<select name="country" id="country" required></select>
-<select name="track" required>
-<option value="" disabled selected>Select Your Track</option>
-<option>Track 1 – Intelligent Electronics</option>
-<option>Track 2 – AI Power Engineering</option>
-<option>Track 3 – Robotics & Control</option>
-<option>Track 4 – Mechanical Systems</option>
-<option>Track 5 – Sustainable Engineering</option>
-</select>
-<input name="title" placeholder="Paper Title" required>
-<input name="institution" placeholder="Institution Name" required>
-<input type="email" name="email" placeholder="Email ID" required>
-<input name="whatsapp" placeholder="WhatsApp Number" required>
-<input type="file" name="paper" accept=".doc,.docx" required>
-<button>Submit Paper</button>
+  <div class="container glass">
+    <h2>Paper Submission</h2>
 
-</form>
-</div>
+    <form id="paperForm">
+      <input name="author" placeholder="Corresponding Author Name" required>
+
+      <select name="country" id="country" required></select>
+
+      <select name="track" required>
+        <option value="" disabled selected>Select Your Track</option>
+        <option>Track 1 – Intelligent Electronics</option>
+        <option>Track 2 – AI Power Engineering</option>
+        <option>Track 3 – Robotics & Control</option>
+        <option>Track 4 – Mechanical Systems</option>
+        <option>Track 5 – Sustainable Engineering</option>
+      </select>
+
+      <input name="title" placeholder="Paper Title" required>
+      <input name="institution" placeholder="Institution Name" required>
+      <input type="email" name="email" placeholder="Email ID" required>
+      <input name="whatsapp" placeholder="WhatsApp Number" required>
+
+      <input type="file" name="paper" class="dark-file" accept=".doc,.docx" required>
+
+      <button type="submit">Submit Paper</button>
+    </form>
+  </div>
 </section>
+
 
 <section id="sponsors">
 <div class="container">
@@ -1159,9 +1291,10 @@ with additional publication charges as per the willingness of the authors.
 <div class="container">
 <h2>Contact</h2>
 <ul class="contact-list">
-<li>📍 Kamaraj College of Engineering and Technology</li>
-<li>📧 innovate@kamarajcollege.edu.in</li>
-<li>📞 +91 97885 69886</li>
+<li>📍 INNVOVATE2026 Conference Coordinators</li>
+<li>Kamaraj College of Engineering and Technology</li>
+<li>📧 kamarajinnovate2026@gmail.com</li>
+<li>📞 +91 9487759597</li>
 </ul>
 </div>
 </section>
@@ -1193,7 +1326,7 @@ for(let a=65;a<=90;a++){
 /* PAPER ID */
 function genID(){return "INN-2026-"+Math.floor(1000+Math.random()*9000)}
 
-const SCRIPT_URL="https://script.google.com/macros/s/AKfycbzvbOe943GNWnVaaeZdc3gp_UunMvC3UUp_rDUwvIembFVvV_FAGDRmVgt6bpc1gQM6SQ/exec";
+const SCRIPT_URL="https://script.google.com/macros/s/AKfycbzyhLUnWdNRrgX_eTCRSIi8C3tyh8j0nrlot1qagm7W2-duRX8HqUmLgyYAPd6YyOgsTQ/exec";
 
 document.getElementById("paperForm").addEventListener("submit", e => {
   e.preventDefault();
@@ -1384,3 +1517,4 @@ setInterval(() => {
 
 </body>
 </html>
+
